@@ -1,0 +1,10 @@
+*.pyc
+_build/
+build/
+dist/
+amonone.egg-info/
+.sass-cache
+keys.py
+.DS_Store
+*tar.gz
+*.zip
