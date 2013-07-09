@@ -81,18 +81,19 @@ header .button:hover {
   width: 100%;
   background: white; }
 
-#sidebar {
+.scroll-nav {
   background-color: #f8f8f8;
   display: table-cell;
   height: 100%;
   vertical-align: top;
   border-right: 2px solid #ebebeb; }
-#sidebar ul {
+.scroll-nav ol {
   float: left; }
-#sidebar ul li {
+.scroll-nav ol li {
   float: left;
   clear: left; }
-#sidebar ul li a {
+.scroll-nav ol li a {
+  outline: none;
   float: left;
   color: #161516;
   -webkit-box-sizing: border-box;
@@ -103,7 +104,7 @@ header .button:hover {
   border-bottom: 2px solid #ebebeb;
   font-size: 1.8em;
   text-decoration: none; }
-#sidebar ul li a:hover {
+.scroll-nav ol li a:hover {
   background: white; }
 
 #main {

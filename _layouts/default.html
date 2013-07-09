@@ -22,8 +22,7 @@
 			
 		</header>
 		<section id="content">
-			<div class="wrapper">
-			{% include sidebar.html %}
+			<div class="wrapper">	
 			<div id="main">
 				{{ content| markdownify }}
 			</div><!-- main END -->
@@ -33,7 +32,9 @@
 		<footer></footer>
 
 		</body>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{{ site.url }}/js/jquery.scrollNav.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
@@ -42,6 +43,12 @@ $(window).load(function() {
         animSpeed: 200, 
          directionNav: false, 
         pauseTime: 5000,  });
+
+    $('#main').scrollNav({
+    	showHeadline: false,
+    	showTopLink: false,
+    	sections: 'h1', 
+	});
 });
 </script>
 </html>

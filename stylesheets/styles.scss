@@ -57,19 +57,20 @@ header {
 	
 	background: white;
 	}
-#sidebar {
+.scroll-nav {
 	background-color: $sidebar_color; 
 	display: table-cell; 
 	height: 100%;
 	vertical-align: top;
 	border-right: 2px solid $border_color;
-	ul {
+	ol {
 		float: left;
 		li {
 			float: left;
 			clear: left;	
 			
 			a {
+				outline: none;
 				float: left;
 				color: $main_color;
 				@include box-sizing(border-box);
