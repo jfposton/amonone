@@ -16,7 +16,8 @@
 		<header>
 			<div class="wrapper">
 				<a class='logo' href="/"></a>
-				<a href="https://github.com/martinrusev/amonone" class="github">Github</a>
+				<a href="https://github.com/martinrusev/amonone" class="button">Github</a>
+				<a href="https://amon.cx" class='button'>Amon</a>
 			</div>
 			
 		</header>
@@ -36,8 +37,8 @@
 
 <p>AmonOne is the open source version of <a href='https://amon.cx'>Amon</a>.</p>
 <div class='nivoSlider' id='slider'>
-	<img alt='' src='http://fc09.deviantart.net/fs70/f/2013/189/3/e/muted_echoes_by_korbox-d6ci7nr.jpg' />
-	<img alt='' src='http://fc03.deviantart.net/fs70/i/2013/189/7/f/a_warm_day_by_the_lake_by_inviv0-d6chup6.jpg' />
+	<img alt='' src='http://localhost:4000/images/slide-1.png' />
+	<img alt='' src='http://localhost:4000/images/slide-2.png' />
 </div>
 <h1 id='installation'>Installation</h1>
 
@@ -220,7 +221,7 @@ http://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a> and paste the va
 
 <h1 id='changelog'>Changelog</h1>
 
-<p>ss</p>
+<h2 id='amonone_168__released_on_9072013'>AmonOne 1.6.8 - Released on 9.07.2013</h2>
 			</div><!-- main END -->
 			</div><!-- wrapper END -->
 		</section>
@@ -235,7 +236,8 @@ $(window).load(function() {
     $('#slider').nivoSlider({
         effect: 'fade',
         animSpeed: 200, 
-        pauseTime: 2000,  });
+         directionNav: false, 
+        pauseTime: 5000,  });
 });
 </script>
 </html>

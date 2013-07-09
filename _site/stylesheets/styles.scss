@@ -2,11 +2,8 @@
 @import "compass/reset";
 @import "compass/utilities";
 
-$yellow: #fdcb34;
-$sidebar_color: #f8f8f8;
-$main_color: #161516;
-$border_color: #ebebeb;
-$grey: #bbb;
+@import "_variables.scss";
+
 
 $content_width: 780px;
 
@@ -36,7 +33,7 @@ header {
 		height: 37px;
 		margin: 22px 0px 0px 20px;
 	}
-	.github {
+	.button {
 		float: right;
 		border: 2px solid $yellow;
 		color: $yellow;

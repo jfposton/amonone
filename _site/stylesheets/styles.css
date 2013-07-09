@@ -56,7 +56,7 @@ header .logo {
   width: 150px;
   height: 37px;
   margin: 22px 0px 0px 20px; }
-header .github {
+header .button {
   float: right;
   border: 2px solid #fdcb34;
   color: #fdcb34;
@@ -72,7 +72,7 @@ header .github {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-header .github:hover {
+header .button:hover {
   border: 2px solid white;
   color: white; }
 

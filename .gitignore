@@ -8,3 +8,4 @@ keys.py
 .DS_Store
 *tar.gz
 *.zip
+_site/
