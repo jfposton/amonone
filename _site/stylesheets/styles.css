@@ -36,6 +36,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-size: 62.5%;
   font-family: Arial, Helvetica; }
+body ::selection {
+  background: #fdcb34; }
+body ::-moz-selection {
+  background: #fdcb34; }
 
 .wrapper {
   width: 980px;
@@ -121,7 +125,8 @@ header .github:hover {
   font-size: 1.6em;
   line-height: 1.4em;
   float: left;
-  clear: left; }
+  clear: left;
+  margin-bottom: 10px; }
 #main a {
   color: #161516; }
 #main strong {
@@ -150,6 +155,7 @@ header .github:hover {
   color: #161516; }
 #main ol {
   float: left;
+  clear: left;
   list-style-type: decimal;
   margin-left: 20px; }
 #main ol li {
@@ -160,6 +166,7 @@ header .github:hover {
   line-height: 1.8em; }
 #main ul {
   float: left;
+  clear: left;
   list-style-type: none;
   margin-left: 0px; }
 #main ul li {

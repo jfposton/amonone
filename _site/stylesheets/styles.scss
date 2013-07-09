@@ -13,6 +13,12 @@ $content_width: 780px;
 body {
 	font-size: 62.5%;
 	font-family: Arial, Helvetica;
+	::selection {
+		background: $yellow;
+	}
+	::-moz-selection {
+		background: $yellow; 
+	}
 }
 .wrapper {
 	width: 980px;
@@ -103,6 +109,7 @@ header {
 		line-height: 1.4em;
 		float: left;
 		clear: left;
+		margin-bottom: 10px;
 	}
 	a {
 			color: $main_color;
@@ -136,6 +143,7 @@ header {
 	}
 	ol { 
 		float: left;
+		clear: left;
 		list-style-type: decimal;
 		margin-left: 20px;
 		li {
@@ -148,6 +156,7 @@ header {
 	}	
 	ul {
 		float: left;
+		clear: left;
 		list-style-type: none;
 		margin-left: 0px;
 		li {
