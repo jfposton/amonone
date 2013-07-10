@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, #main h2, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, #content h2, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -33,6 +33,9 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+html, body {
+  height: 100%; }
+
 body {
   font-size: 62.5%;
   font-family: Arial, Helvetica; }
@@ -41,15 +44,13 @@ body ::selection {
 body ::-moz-selection {
   background: #fdcb34; }
 
-.wrapper {
-  width: 980px;
-  margin: 0 auto;
-  display: table; }
-
 header {
   background: #161516;
   width: 100%;
-  height: 84px; }
+  display: block;
+  height: 84px;
+  overflow: hidden;
+  *zoom: 1; }
 header .logo {
   float: left;
   background: url(../images/logo.png) no-repeat;
@@ -76,72 +77,78 @@ header .button:hover {
   border: 2px solid white;
   color: white; }
 
-#content {
-  float: left;
+#column-wrapper {
+  display: table;
   width: 100%;
-  background: white; }
+  position: relative; }
 
-.scroll-nav {
-  background-color: #f8f8f8;
+#sidebar {
+  width: 180px;
+  background: #f8f8f8;
   display: table-cell;
-  height: 100%;
   vertical-align: top;
   border-right: 2px solid #ebebeb; }
-.scroll-nav ol {
+#sidebar.fixed ol {
+  top: 20px;
+  position: fixed; }
+#sidebar ol {
   float: left; }
-.scroll-nav ol li {
+#sidebar ol li {
   float: left;
   clear: left; }
-.scroll-nav ol li a {
+#sidebar ol li.active a {
+  background: white;
+  border-right: 2px solid white; }
+#sidebar ol li a {
   outline: none;
+  margin-right: -2px;
   float: left;
   color: #161516;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px;
-  width: 180px;
+  width: 182px;
   border-bottom: 2px solid #ebebeb;
   font-size: 1.8em;
   text-decoration: none; }
-.scroll-nav ol li a:hover {
+#sidebar ol li a:hover {
   background: white; }
 
-#main {
-  width: 780px;
+#content {
+  display: table-cell;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 20px;
-  display: table-cell; }
-#main h1, #main h2 {
+  padding: 30px; }
+#content h1, #content h2 {
   font-size: 3em;
   margin-bottom: 20px;
   margin-top: 20px;
   float: left;
   clear: left; }
-#main h2 {
+#content h2 {
   font-size: 2.2em; }
-#main p {
+#content p {
   font-size: 1.6em;
   line-height: 1.4em;
   float: left;
   clear: left;
   margin-bottom: 10px; }
-#main a {
+#content a {
   color: #161516; }
-#main strong {
+#content strong {
   font-weight: bold; }
-#main pre {
+#content pre {
   float: left; }
-#main pre code {
+#content pre code {
   float: left;
   width: 780px;
   font-size: 1.6em;
   line-height: 1.4em; }
-#main pre code .c {
+#content pre code .c {
   color: #bbbbbb; }
-#main code {
+#content code {
   border: 2px solid #ebebeb;
   background: #f8f8f8;
   padding: 4px;
@@ -152,28 +159,28 @@ header .button:hover {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px; }
-#main code a {
+#content code a {
   color: #161516; }
-#main ol {
+#content ol {
   float: left;
   clear: left;
   list-style-type: decimal;
   margin-left: 20px; }
-#main ol li {
+#content ol li {
   float: left;
   margin-bottom: 15px;
   clear: left;
   font-size: 1.6em;
   line-height: 1.8em; }
-#main ul {
+#content ul {
   float: left;
   clear: left;
   list-style-type: none;
   margin-left: 0px; }
-#main ul li {
+#content ul li {
   float: left;
   margin-bottom: 15px;
   clear: left; }
-#main ul ul {
+#content ul ul {
   margin-left: 20px;
   margin-top: 20px; }

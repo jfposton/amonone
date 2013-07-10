@@ -4,10 +4,13 @@
 
 @import "_variables.scss";
 
-
 $content_width: 780px;
 
-body {
+html, body {
+	height: 100%;
+}
+
+body {	
 	font-size: 62.5%;
 	font-family: Arial, Helvetica;
 	::selection {
@@ -17,16 +20,14 @@ body {
 		background: $yellow; 
 	}
 }
-.wrapper {
-	width: 980px;
-	margin: 0 auto;
-	display: table;
-}
+
 header {
 	background: #161516;
 	width: 100%;
+	display: block;
 	height: 84px;
-	.logo {
+	@include clearfix; 
+	.logo { 
 		float: left;
 		background: url(../images/logo.png) no-repeat;
 		width: 150px;
@@ -51,31 +52,44 @@ header {
 		}
 	}
 }
-#content {
-	float: left;
+
+#column-wrapper {
+	display: table;
 	width: 100%;
-	
-	background: white;
-	}
-.scroll-nav {
-	background-color: $sidebar_color; 
-	display: table-cell; 
-	height: 100%;
+	position: relative;
+}
+
+#sidebar {
+	width: 180px;
+	background: $sidebar_color;
+	display: table-cell;
 	vertical-align: top;
 	border-right: 2px solid $border_color;
+	&.fixed {	
+	 	ol {
+	 		top: 20px;
+			position: fixed;	
+	 	}
+	}
 	ol {
 		float: left;
 		li {
 			float: left;
 			clear: left;	
-			
+			&.active {
+				a{
+					background: white;
+					border-right: 2px solid white;
+				}
+			}
 			a {
 				outline: none;
+				margin-right: -2px;
 				float: left;
 				color: $main_color;
 				@include box-sizing(border-box);
 				padding: 20px;
-				width: 180px;
+				width: 182px;
 				border-bottom: 2px solid $border_color;
 				font-size: 1.8em;
 				text-decoration: none;
@@ -86,11 +100,11 @@ header {
 		}
 	}
 }
-#main {
-	width: $content_width;
-	@include box-sizing(border-box);
-	padding: 20px;
+
+#content {
 	display: table-cell;
+	@include box-sizing(border-box);
+	padding: 30px;
 	h1 {
 		font-size: 3em;
 		margin-bottom: 20px;
@@ -168,3 +182,4 @@ header {
 		}
 	}
 }
+

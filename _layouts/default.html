@@ -6,13 +6,13 @@
 		<title>AmonOne</title>
 
 		<link rel="stylesheet" href="{{ site.url }}/stylesheets/styles.css">
-		<link rel="stylesheet" href="{{ site.url }}/stylesheets/nivo-slider.css">
+		<link rel="stylesheet" href="{{ site.url }}/stylesheets/slider.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body> 
 		<header>
 			<div class="wrapper">
 				<a class='logo' href="/"></a>
@@ -21,34 +21,21 @@
 			</div>
 			
 		</header>
-		<section id="content">
-			<div class="wrapper">	
-			<div id="main">
-				{{ content| markdownify }}
-			</div><!-- main END -->
-			</div><!-- wrapper END -->
-		</section>
 		
-		<footer></footer>
-
-		</body>
+<div id="column-wrapper">
+	<div id="content">{{ content| markdownify }}</div>
+</div><!-- column-wrapper END -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="{{ site.url }}/js/jquery.scrollNav.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-nivoslider/3.2/jquery.nivo.slider.pack.js"></script>
 <script type="text/javascript">
 $(window).load(function() {
-    $('#slider').nivoSlider({
-        effect: 'fade',
-        animSpeed: 200, 
-         directionNav: false, 
-        pauseTime: 5000,  });
-
-    $('#main').scrollNav({
-    	showHeadline: false,
-    	showTopLink: false,
-    	sections: 'h1', 
+	$('#content').scrollNav({
+		showHeadline: false,
+		showTopLink: false,
+		sections: 'h1', 
 	});
 });
 </script>
+</body>
 </html>
