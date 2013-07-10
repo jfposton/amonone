@@ -106,8 +106,11 @@ header {
 	@include box-sizing(border-box);
 	padding: 30px;
 	h1 {
-		font-size: 3em;
+		font-size: 3.4em;
 		margin-bottom: 20px;
+		padding-bottom: 15px;
+		border-bottom: 3px solid $sidebar_color;
+		width: 100%;
 		margin-top: 20px;
 		float: left;
 		clear: left;
@@ -115,6 +118,7 @@ header {
 	h2 {
 		@extend h1;
 		font-size: 2.2em;
+		border-bottom: 0px;
 	}
 	p {
 		font-size: 1.6em;
@@ -132,6 +136,7 @@ header {
 	}
 	pre {
 		float: left;
+		clear: left;
 		code {
 			float: left;
 			width: $content_width;

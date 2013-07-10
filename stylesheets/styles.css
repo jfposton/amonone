@@ -122,13 +122,17 @@ header .button:hover {
   box-sizing: border-box;
   padding: 30px; }
 #content h1, #content h2 {
-  font-size: 3em;
+  font-size: 3.4em;
   margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #f8f8f8;
+  width: 100%;
   margin-top: 20px;
   float: left;
   clear: left; }
 #content h2 {
-  font-size: 2.2em; }
+  font-size: 2.2em;
+  border-bottom: 0px; }
 #content p {
   font-size: 1.6em;
   line-height: 1.4em;
@@ -140,7 +144,8 @@ header .button:hover {
 #content strong {
   font-weight: bold; }
 #content pre {
-  float: left; }
+  float: left;
+  clear: left; }
 #content pre code {
   float: left;
   width: 780px;
