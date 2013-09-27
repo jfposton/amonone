@@ -15,7 +15,10 @@ $(function ()
 			percent = total/100;
 
 			width_in_percent = value/percent;
-			var progress_width = Math.floor((max_width/100) * width_in_percent)
+			var progress_width = Math.min(Math.floor((max_width/100) * width_in_percent), max_width);
+			if(progress_width == max_width){
+				el.css('background-color: red');
+			}
 		}
 		else if(value > 0) {
 
